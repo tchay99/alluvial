@@ -20,11 +20,9 @@ while ( have_posts() ) :
 	</section>
 
 	<div class="wrap">
-		<?php if ( has_post_thumbnail() ) : ?>
-			<div class="hero-media" style="aspect-ratio:21/9; max-width:900px; margin:0 auto 48px;">
-				<?php the_post_thumbnail( 'large' ); ?>
-			</div>
-		<?php endif; ?>
+		<div class="hero-media" style="aspect-ratio:21/9; max-width:900px; margin:0 auto 48px;">
+			<?php alluvial_post_thumbnail( get_the_ID(), 'large' ); ?>
+		</div>
 
 		<div class="entry-content">
 			<?php the_content(); ?>
@@ -59,7 +57,7 @@ while ( have_posts() ) :
 			<div class="post-grid">
 				<?php while ( $related->have_posts() ) : $related->the_post(); ?>
 					<a href="<?php the_permalink(); ?>" class="post-card">
-						<div class="thumb"><?php if ( has_post_thumbnail() ) the_post_thumbnail( 'medium_large' ); ?></div>
+						<div class="thumb"><?php alluvial_post_thumbnail( get_the_ID() ); ?></div>
 						<div class="body">
 							<h3><?php the_title(); ?></h3>
 							<p class="meta"><?php echo esc_html( get_the_date() ); ?></p>

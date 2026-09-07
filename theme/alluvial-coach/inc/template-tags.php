@@ -21,3 +21,19 @@ function alluvial_reading_time() {
 		$minutes
 	);
 }
+
+/**
+ * Prints a post's featured image, or one of three bundled placeholder
+ * tiles (cycled by post ID) when no featured image has been set yet —
+ * so a fresh Insights index doesn't show empty boxes before real cover
+ * images are uploaded.
+ */
+function alluvial_post_thumbnail( $post_id, $size = 'medium_large' ) {
+	if ( has_post_thumbnail( $post_id ) ) {
+		echo get_the_post_thumbnail( $post_id, $size );
+		return;
+	}
+	$letter = array( 'a', 'b', 'c' )[ $post_id % 3 ];
+	$src    = get_template_directory_uri() . '/assets/img/thumb-' . $letter . '.svg';
+	echo '<img src="' . esc_url( $src ) . '" alt="" />';
+}

@@ -25,9 +25,12 @@ get_header();
 		<div class="hero-media">
 			<?php
 			$hero_image = get_theme_mod( 'alluvial_hero_image', '' );
-			if ( $hero_image ) {
-				echo '<img src="' . esc_url( $hero_image ) . '" alt="" />';
+			if ( ! $hero_image ) {
+				// Bundled placeholder art, shown until a real hero image is set
+				// in Appearance > Customize > Homepage Hero.
+				$hero_image = get_template_directory_uri() . '/assets/img/hero-delta.svg';
 			}
+			echo '<img src="' . esc_url( $hero_image ) . '" alt="" />';
 			?>
 		</div>
 	</div>

@@ -20,7 +20,7 @@ get_header();
 			<div class="post-grid">
 				<?php while ( have_posts() ) : the_post(); ?>
 					<a href="<?php the_permalink(); ?>" class="post-card">
-						<div class="thumb"><?php if ( has_post_thumbnail() ) the_post_thumbnail( 'medium_large' ); ?></div>
+						<div class="thumb"><?php alluvial_post_thumbnail( get_the_ID() ); ?></div>
 						<div class="body">
 							<?php $cats = get_the_category(); ?>
 							<?php if ( ! empty( $cats ) ) : ?>

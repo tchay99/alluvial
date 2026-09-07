@@ -4,8 +4,9 @@ This covers three things: what's actually on the live site today, a redesigned s
 
 ## Contents
 
-- `mockups/` — eight static HTML pages (Home, My Profile, My Philosophy, My Practice, Testimonials, Insights, an article, Contact) sharing one CSS file. Open `mockups/index.html` in a browser to click through.
+- `mockups/` — eight static HTML pages (Home, My Profile, My Philosophy, My Practice, Testimonials, Insights, an article, Contact) sharing one CSS file, with original placeholder artwork already in place (see "Photography" below). Open `mockups/index.html` in a browser to click through.
 - `theme/alluvial-coach/` — an installable WordPress theme implementing the same design.
+- `scripts/generate-placeholder-art.py` — regenerates the placeholder artwork.
 - This guide.
 
 Two of the mockups (Home and My Philosophy) are also published as interactive previews you can open directly in a browser tab, listed at the end of this guide.
@@ -123,7 +124,11 @@ Two things to know:
 
 ### 8. Photography
 
-Every mockup and template has a placeholder where a photo should go (the hero image, the Profile page portrait, blog post thumbnails). You already have strong material to work with: the aerial river delta photograph at sunset from the current Philosophy page fits this palette closely and would work well as the homepage hero image. Barbara's existing headshot from My Profile should go on the Profile page. Replace placeholders via the Customizer (hero image) or the block editor's featured image / image block (everywhere else).
+Real stock photo sites weren't reachable from the environment that built this (blocked by network policy, not a licensing choice), so instead of leaving empty grey boxes, every image slot in both the mockups and the theme is filled with original placeholder artwork: a branching river-delta illustration in navy and brass (`hero-delta.svg`) for the hero and article covers, a monogram portrait for Barbara Mendler (`portrait-barbara.svg`), three abstract sediment-wave tiles cycled across blog thumbnails (`thumb-a/b/c.svg`), and small monogram avatars for each placeholder testimonial. All of it is generated, original SVG — no copyright or licensing question, and no visual "stock photo" gap while the rest of the redesign is being reviewed.
+
+None of it is meant to ship. You already have strong real material to swap in: the aerial river delta photograph at sunset from the current Philosophy page fits this palette closely and would work well as the homepage hero image, and Barbara's existing headshot from My Profile should replace the monogram there. Replace placeholders via the Customizer (hero image) or the block editor's featured image / image block (everywhere else).
+
+The generator that made this artwork is included at `scripts/generate-placeholder-art.py` (pure Python, no dependencies) if you want to regenerate variations before real photography is ready — see the file's header for usage.
 
 ### 9. Recommended plugins
 

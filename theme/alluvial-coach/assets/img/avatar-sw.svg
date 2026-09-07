@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Placeholder avatar for SW">
+<defs>
+<linearGradient id="g" x1="83%" y1="87%" x2="17%" y2="13%">
+      <stop offset="0%" stop-color="#1c3160"/>
+      <stop offset="100%" stop-color="#8a6a24"/>
+    </linearGradient>
+</defs>
+<rect width="120" height="120" fill="url(#g)"/>
+<text x="50%" y="53%" text-anchor="middle" dominant-baseline="middle" font-family="Georgia, 'Times New Roman', serif" font-size="41" fill="#faf7f2" opacity="0.95">SW</text>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Abstract sediment-layer illustration">
+<defs>
+<linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e0c27a"/>
+      <stop offset="1" stop-color="#12213c"/>
+    </linearGradient>
+</defs>
+<rect width="640" height="400" fill="url(#g)"/>
+<path d="M0,400 L0,160 C107,160 107,106 213,106 C320,106 320,161 427,161 C533,161 533,108 640,108 L640,400 Z" fill="#faf7f2" opacity="0.10"/>
+<path d="M0,400 L0,220 C107,220 107,184 213,184 C320,184 320,225 427,225 C533,225 533,183 640,183 L640,400 Z" fill="#faf7f2" opacity="0.15"/>
+<path d="M0,400 L0,287 C107,287 107,231 213,231 C320,231 320,291 427,291 C533,291 533,239 640,239 L640,400 Z" fill="#faf7f2" opacity="0.20"/>
+<path d="M0,400 L0,364 C107,364 107,313 213,313 C320,313 320,371 427,371 C533,371 533,312 640,312 L640,400 Z" fill="#faf7f2" opacity="0.25"/>
+</svg>
